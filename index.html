@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorveteria dos Super Heróis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+       .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        h1, h2, p {
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        li {
+            background-color: #f9f9f9;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        form {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+        input[type="text"], select {
+            width: 45%;
+            padding: 10px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sorveteria Super</h1>
+        <h2>Bem-vindo à nossa loja especializada em sorvetes com temas de super-heróis! Aqui você pode realizar o pedido de seu sorvete heroico favorito com apenas alguns cliques.</h2>
+        <p>Aqui você encontrará sabores únicos criados especialmente para os fãs de super-heróis.</p>
+
+        <h3>Nossos Sabores:</h3>
+        <ul>
+            <li>Superman: Sorvete de Algodão doce.</li>
+            <li>Hulk: Sorvete de Chocomenta.</li>
+            <li>Mulher Maravilha: Sorbet de Morango.</li>
+            <li>Capitão América: Sorvete de Pedacinho do céu(blue ice).</li>
+        </ul>
+
+        <h3>Horário de Funcionamento</h3>
+        <p>De segunda a sexta, das 13h às 21h. Sábados e domingos, das 15h às 22h.</p>
+
+        <form action="/submit_order" method="post">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" placeholder="Seu nome aqui...">
+            
+            <label for="flavor">Sabor preferido:</label>
+            <select id="flavor" name="flavor">
+                <option value="superman">Superman</option>
+                <option value="hulk">Hulk</option>
+                <option value="Mulher">Mulher Maravilha</option>
+                <option value="Capitão">Capitão América</option>
+            </select>
+            
+            <button type="submit">Pedir agora!</button>
+        </form>
+    </div>
+</body>
+</html>
