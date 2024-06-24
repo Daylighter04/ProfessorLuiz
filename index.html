@@ -9,11 +9,11 @@
             font-family: Arial, sans-serif;
             margin: 20px;
         }
-       .container {
+        .container {
             max-width: 800px;
             margin: auto;
         }
-        h1, h2, p {
+        h1, h2, h3, p {
             text-align: center;
         }
         ul {
@@ -29,14 +29,17 @@
         }
         form {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
             margin-top: 20px;
         }
+        label {
+            margin: 10px 0 5px 0;
+        }
         input[type="text"], select {
-            width: 45%;
+            width: 80%;
             padding: 10px;
-            margin-right: 10px;
+            margin-bottom: 10px;
         }
         button {
             padding: 10px 20px;
@@ -44,6 +47,16 @@
             color: white;
             border: none;
             cursor: pointer;
+        }
+        .about {
+            margin-top: 40px;
+            text-align: center;
+        }
+        .about img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -58,7 +71,7 @@
             <li>Superman: Sorvete de Algodão doce.</li>
             <li>Hulk: Sorvete de Chocomenta.</li>
             <li>Mulher Maravilha: Sorbet de Morango.</li>
-            <li>Capitão América: Sorvete de Pedacinho do céu(blue ice).</li>
+            <li>Capitão América: Sorvete de Pedacinho do céu (blue ice).</li>
         </ul>
 
         <h3>Horário de Funcionamento</h3>
@@ -66,19 +79,24 @@
 
         <form action="/submit_order" method="post">
             <label for="name">Nome:</label>
-            <input type="text" id="name" name="name" placeholder="Seu nome aqui...">
+            <input type="text" id="name" name="name" placeholder="Seu nome aqui..." aria-label="Nome">
             
             <label for="flavor">Sabor preferido:</label>
-            <select id="flavor" name="flavor">
+            <select id="flavor" name="flavor" aria-label="Sabor preferido">
                 <option value="superman">Superman</option>
                 <option value="hulk">Hulk</option>
-                <option value="Mulher">Mulher Maravilha</option>
-                <option value="Capitão">Capitão América</option>
+                <option value="mulher">Mulher Maravilha</option>
+                <option value="capitao">Capitão América</option>
             </select>
             
             <button type="submit">Pedir agora!</button>
         </form>
+
+        <div class="about">
+            <h3>Sobre Nós</h3>
+            <p>Na Sorveteria dos Super Heróis, nossa missão é trazer alegria e sabor para todos os fãs de super-heróis. Fundada em 2021, nossa loja combina a paixão por sorvetes com o amor pelos heróis mais icônicos do mundo. Venha nos visitar e experimente a magia em cada colherada!</p>
+            <img src="https://via.placeholder.com/300" alt="Equipe da Sorveteria dos Super Heróis">
+        </div>
     </div>
 </body>
-
 </html>
